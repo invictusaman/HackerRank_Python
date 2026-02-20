@@ -40,12 +40,10 @@ HK
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from itertools import combinations
 
-# Read input
 input_val = input().split()
 string = input_val[0]
 max_len = int(input_val[1])
 
-# Sort the string to ensure lexicographic order
 sorted_string = sorted(string)
 
 # Print single letters
