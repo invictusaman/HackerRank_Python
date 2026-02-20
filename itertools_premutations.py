@@ -52,17 +52,16 @@ All possible size  permutations of the string "HACK" are printed in lexicographi
 from itertools import permutations
 
 input_val = input().split()
-
 string = input_val[0]
 num = int(input_val[1])
 
-pairs = list(permutations(string, num))
-pairs.sort() # lexicographical sorting
+# Sort string first to ensure lexicographic order
+sorted_string = sorted(string)
 
+# Generate permutations
+pairs = permutations(sorted_string, num)
+
+# Print each permutation
 for pair in pairs:
-    result = ''
-    for item in pair:
-        result  += ''.join(item)
-    print(result)    
-
+    print(''.join(pair))
 
